@@ -1,0 +1,81 @@
+html, body {
+    margin: 0;
+    font-family: 'Poppins';
+}
+
+body {
+    background-color: #014BA7;
+}
+
+h1, h2, h3, h4, p {
+    margin: 0;
+}
+
+.flex-center {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.gap-5 {
+    gap: 5px;
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+}
+
+.menu-items {
+    padding: 0;
+    display: flex;
+    color: #BBD0F5;
+    list-style-type: none;
+    justify-content: center;
+
+    /* @media screen and (max-width: 540px) {
+        margin: 0;
+        width: 100%;
+        display: block;
+    } */
+
+    li {
+        cursor: pointer;
+        margin: 5px 25px;
+        /* @media screen and (max-width: 540px) {
+            margin: 0;
+            display: flex;
+            border: 1px solid white;
+            justify-content: center;
+        } */
+    }
+}
+
+.landing-div {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #BBD0F5;
+
+    border-radius: 10px;
+    border: 8px solid #78a6f5;
+}
+
+.car-img {
+    width: 400px;
+    height: 300px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url(./assets/images/car-wash.png);
+}
+
+.large-pink-pill {
+    padding: 6px 10px;
+    border-radius: 25px;
+    border: #db5e74 5px solid;
+    background-color: #ffa1b1;
+    text-align: center;
+    margin-top: 20px;
+}

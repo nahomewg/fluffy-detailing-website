@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>WoldeCode - Cutting-edge web solutions.</title>
+    <title>Fluffy's Auto Detailing</title>
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <script type="text/javascript" src="index.js"></script>
     <link rel="stylesheet" type="text/css" href="styles.css">
@@ -13,10 +13,30 @@
   </head>
 </html>
 
+<!-- header component with tabs. -->
 <header>
-
+    <div class="menu">
+        <ul class="menu-items">
+            <li onclick="toSection('aboutUs')">About Us</li>
+            <li onclick="toSection('bookings')">Bookings/Quotes</li>
+            <li onclick="toSection('gallery')">Gallery</li>
+            <li onclick="toSection('contactUs')">Contact Us</li>
+        </ul>
+    </div>
 </header>
 
+<!-- main body of the landing page. -->
 <body>
-    Hello World!
+    <div style="display: flex; height: 75vh;">
+        <div class="landing-div">
+            <div>
+                <h1>Fluffy's Auto Detailing</h1>
+                <p>Providing affordable luxury detailing services in the Edmonton area.</p>
+                <div class="large-pink-pill" style="cursor: pointer;">
+                    <p>Book a Service Today</p>
+                </div>
+            </div>
+            <div class="car-img"></div>
+        </div>
+    </div>
 </body>
