@@ -79,3 +79,25 @@ h1, h2, h3, h4, p {
     text-align: center;
     margin-top: 20px;
 }
+
+.about-div {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    gap: 10px;
+}
+
+.about-div > div {
+    background-color: #BBD0F5;
+    border-radius: 10px;
+    border: 8px solid #78a6f5;
+    text-align: center;
+}
+
+.fluffy-img {
+    width: 510px;
+    height: 1103px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url(./assets/images/fluffy.png);
+}
