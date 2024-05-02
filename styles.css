@@ -130,11 +130,11 @@ section {
         border: 2px solid #F8CF61;
     }
 
-    #hero-btn-1:hover, #hero-btn-2:hover {
+    /* #hero-btn-1:hover, #hero-btn-2:hover {
         color: #000;
         border: 2px solid #F36B7F;
         background-color: #F36B7F;
-    }
+    } */
 }
 
 @media only screen and (max-width: 494px) {
