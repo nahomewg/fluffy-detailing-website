@@ -17,13 +17,22 @@ window.addEventListener("load", (event) => {
     // });
 });
 
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+      document.getElementById("navbar").classList.add("active");
+  } else {
+    document.getElementById("navbar").classList.remove("active");
+  }
+}
 
 // Scroll to function, to smoothly navigate through the web page.
-function toSection(section, tabId) {
+function toSection(section, tabId = '') {
     const element = document.getElementById(section);
     element.scrollIntoView( { behavior: "smooth" } );
 
-    if (window.screen.width <= 820) {
+    if (window.screen.width <= 820 && tabId != '') {
         changeMobileTab(tabId);
     }
 }
