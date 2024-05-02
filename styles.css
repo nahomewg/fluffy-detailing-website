@@ -1,16 +1,45 @@
 html, body {
     margin: 0;
+    overflow-x: hidden;
     font-family: 'Outfit';
+    scroll-behavior: smooth;
 }
 
 body {
-    background-image: url("./assets/images/background.png");
     background-size: cover;
     background-repeat: repeat-y;
+    background-image: url("./assets/images/background.png");
 }
 
-h1, h2, h3, h4, p {
+header {
+    display: grid;
+    grid-gap: 15px;
+    margin: 30px 100px 0px 100px;
+    grid-template-columns: 1fr 1fr;
+
+    /* top: 0;
+    z-index: 1;
+    width: 100%;
+    position: fixed;
+    background-color: #0B1454; */
+}
+
+h1, h2, h3, h4, p, a {
+    color: #FFF;
     margin: 0;
+}
+
+li, p, a {
+    font-size: 20px;
+    font-weight: 300;
+}
+
+ul {
+    padding: 0;
+}
+
+section {
+    margin: 0px 100px;
 }
 
 .flex-center {
@@ -23,20 +52,11 @@ h1, h2, h3, h4, p {
     gap: 5px;
 }
 
-.header-grid {
-    display: grid;
-    grid-gap: 15px;
-    margin: 30px 45px 0px 45px;
-    grid-template-columns: 1fr 1fr;
-}
-
 .header-name {
     gap: 16px;
     display: flex;
     align-items: center;
     p {
-        color: #FFF;
-        font-size: 20px;
         font-weight: bold;
     }
     img {
@@ -50,12 +70,81 @@ h1, h2, h3, h4, p {
     align-items: center;
     justify-content: end;
     li {
-        font-size: 20px;
-        font-weight: 300;
         list-style: none;
         a {
-            color: #FFF;
             text-decoration: none;
         }
+    }
+}
+
+.hero-container {
+    display: grid;
+    grid-gap: 15px;
+    margin-top: 25px;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+
+    .main-heading {
+        margin-top: 100px;
+        h1 {
+            font-size: 64px;
+        }
+        p {
+            margin-top: 25px;
+            font-family: "Roboto";
+        }
+    }
+
+    .hero-image {
+        min-width: 300px;
+        min-height: 300px;
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-image: url("./assets/images/car-wash.png");
+    }
+}
+
+.hero-buttons {
+    gap: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 40px;
+
+    button {
+        cursor: pointer;
+        min-width: 200px;
+        font-size: 24px;
+        font-weight: 500;
+        padding: 24px 32px;
+        border-radius: 100px;
+        font-family: "Outfit";
+
+    }
+    #hero-btn-1 {
+        background-color: #9FBFFF;
+    }
+
+    #hero-btn-2 {
+        color: #FFF;
+        background-color: inherit;
+        border: 2px solid #F8CF61;
+    }
+
+    #hero-btn-1:hover, #hero-btn-2:hover {
+        color: #000;
+        border: 2px solid #F36B7F;
+        background-color: #F36B7F;
+    }
+}
+
+@media only screen and (max-width: 494px) {
+    section {
+        margin: 0px 20px;
+    }
+}
+
+@media only screen and (max-width: 694px) {
+    .hero-buttons {
+        justify-content: center;
     }
 }
