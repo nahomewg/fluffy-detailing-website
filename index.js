@@ -35,6 +35,10 @@ function toSection(section, tabId = '') {
     if (window.screen.width <= 820 && tabId != '') {
         changeMobileTab(tabId);
     }
+
+    if (tabId === '') {
+        changeMobileTab("home");
+    }
 }
 
 function changeMobileTab(tabId) {

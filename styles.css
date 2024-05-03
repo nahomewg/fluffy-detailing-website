@@ -40,6 +40,7 @@ ul {
 
 section {
     margin: 0px 100px;
+    scroll-margin: 100px;
 }
 
 .flex-center {
