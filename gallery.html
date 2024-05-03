@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Fluffy's Auto Detailing - Gallery</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <script type="text/javascript" src="index.js"></script>
+    <script type="text/javascript" src="./scripts/gallery.js"></script>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" type="text/css" href="./styles/gallery.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+  </head>
+</html>
+
+<!-- header component with tabs. -->
+<header>
+    <div class="header-name" onclick="changeMobileTab('home', true)">
+        <img src="./assets/icons/panda.png">
+        <h1>Fluffy's Auto Detailing</h1>
+    </div>
+    <div class="header-tabs">
+        <ul>
+            <li><a href="./index.html">about</a></li>
+            <li><a href="./pricing.html">pricing</a></li>
+            <li><a href="#contact">contact</a></li>
+            <li><a href="#gallery">gallery</a></li>
+        </ul>
+    </div>
+</header>
+
+<!-- main body of the landing page. -->
+<body>
+    <section id="gallery">
+        <div class="hero-container">
+            <div class="main-heading">
+                <h2>Gallery.</h2>
+                <p>View our  before and after photo gallery of previously satisfied customers.</p>
+            </div>
+            <div class="gallery-image"></div>
+        </div>
+    </section>
+
+    <section id="photos">
+        <!-- Slideshow container -->
+        <div class="slideshow-container">
+
+            <!-- Full-width images with number and caption text -->
+            <div class="mySlides fade">
+                <div class="numbertext">1 / 8</div>
+                <img src="./assets/images/slideshow/vw-1.png" style="width:100%; max-height: 300px; object-fit: contain">
+            </div>
+            <div class="mySlides fade">
+                <div class="numbertext">2 / 8</div>
+                <img src="./assets/images/slideshow/vw-2.png" style="width:100%; max-height: 300px; object-fit: contain">
+            </div>
+        
+            <div class="mySlides fade">
+                <div class="numbertext">3 / 8</div>
+                <img src="./assets/images/slideshow/vw-3.png" style="width:100%; max-height: 300px; object-fit: contain">
+            </div>
+            <div class="mySlides fade">
+                <div class="numbertext">4 / 8</div>
+                <img src="./assets/images/slideshow/vw-4.png" style="width:100%; max-height: 300px; object-fit: contain">
+            </div>
+            <div class="mySlides fade">
+                <div class="numbertext">5 / 8</div>
+                <img src="./assets/images/slideshow/vw-5.png" style="width:100%; max-height: 300px; object-fit: contain">
+            </div>
+        
+            <div class="mySlides fade">
+                <div class="numbertext">6 / 8</div>
+                <img src="./assets/images/slideshow/vw-6.png" style="width:100%; max-height: 300px; object-fit: contain">
+            </div>
+            <div class="mySlides fade">
+                <div class="numbertext">7 / 8</div>
+                <img src="./assets/images/slideshow/vw-7.png" style="width:100%; max-height: 300px; object-fit: contain">
+            </div>
+            <div class="mySlides fade">
+                <div class="numbertext">8 / 8</div>
+                <img src="./assets/images/slideshow/vw-8.png" style="width:100%; max-height: 300px; object-fit: contain">
+            </div>
+        
+            <!-- Next and previous buttons -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        <br>
+    </section>
+
+    <section id="contact">
+        <div class="services-container">
+            <h2>Contact Us.</h2>
+            <p>For any and all inquiries, questions, comments, and concerns, please feel free to contact us with one of the options below.
+            </p>
+            <div class="service-button">
+                <button>Email</button>
+            </div>
+        </div>
+    </section>
+
+    <div id="navbar" class="mobile-tab-bar">
+        <nav>
+            <div class="icons">
+                <!-- About me tab -->
+                <div id="home" class="nav-tab" onclick="changeMobileTab(id, true)">
+                    <img src="./assets/icons/home.png">
+                    <p>Home</p>
+                </div>
+                <!-- Education tab -->
+                <div id="pricing" class="nav-tab" onclick="changeMobileTab(id, true)">
+                    <img src="./assets/icons/pricing.png">
+                    <p>Pricing</p>
+                </div>
+                <!-- Experience tab -->
+                <div id="contact" class="nav-tab" onclick="toSection('contact', id)">
+                    <img src="./assets/icons/contact.png">
+                    <p>Contact</p>
+                </div>
+                <!-- Projects tab -->
+                <div id="gallery" class="nav-tab active" onclick="toSection('gallery', id)">
+                    <img src="./assets/icons/camera.png">
+                    <p>Gallery</p>
+                </div>
+            </div>
+        </nav>
+    </div>
+</body>
+
+<footer>
+    <div>
+        <div class="footer-name">
+            <img src="./assets/icons/panda.png" onclick="changeMobileTab('home', true)">
+            <p>Fluffy's Auto Detailing</p>
+        </div>
+        <p>Created by Nahome Wolde-Giorgis (2024). Icons by Icons8.</p>
+        </div>
+</footer>

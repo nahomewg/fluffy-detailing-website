@@ -18,14 +18,14 @@
 <header>
     <div class="header-name">
         <img src="./assets/icons/panda.png">
-        <p>Fluffy's Auto Detailing</p>
+        <h1>Fluffy's Auto Detailing</h1>
     </div>
     <div class="header-tabs">
         <ul>
             <li onclick="toSection('about')"><a href="#about">about</a></li>
-            <li><a href="#pricing">pricing</a></li>
-            <li><a href="#contact">contact</a></li>
-            <li><a href="#gallery">gallery</a></li>
+            <li><a href="./pricing.html">pricing</a></li>
+            <li onclick="changeMobileTab('contact', true)"><a href="#contact">contact</a></li>
+            <li><a href="./gallery.html">gallery</a></li>
         </ul>
     </div>
 </header>
@@ -42,7 +42,7 @@
         </div>
         <div class="hero-buttons">
             <button id="hero-btn-1" onclick="toSection('about')">About Fluffy's</button>
-            <button id="hero-btn-2">Gallery</button>
+            <button id="hero-btn-2" onclick="changeMobileTab('gallery', true)">Gallery</button>
         </div>
     </section>
 
@@ -95,17 +95,17 @@
                     <p>Home</p>
                 </div>
                 <!-- Education tab -->
-                <div id="pricing" class="nav-tab" onclick="changeMobileTab(id)">
+                <div id="pricing" class="nav-tab" onclick="changeMobileTab(id, true)">
                     <img src="./assets/icons/pricing.png">
                     <p>Pricing</p>
                 </div>
                 <!-- Experience tab -->
-                <div id="contact" class="nav-tab" onclick="changeMobileTab(id)">
+                <div id="contact" class="nav-tab" onclick="changeMobileTab(id, true)">
                     <img src="./assets/icons/contact.png">
                     <p>Contact</p>
                 </div>
                 <!-- Projects tab -->
-                <div id="gallery" class="nav-tab" onclick="changeMobileTab(id)">
+                <div id="gallery" class="nav-tab" onclick="changeMobileTab(id, true)">
                     <img src="./assets/icons/camera.png">
                     <p>Gallery</p>
                 </div>
@@ -116,7 +116,7 @@
 
 <footer>
     <div>
-        <div class="footer-name">
+        <div class="footer-name" onclick="toSection('home')">
             <img src="./assets/icons/panda.png">
             <p>Fluffy's Auto Detailing</p>
         </div>

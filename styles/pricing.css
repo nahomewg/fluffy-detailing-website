@@ -1,0 +1,72 @@
+.savings-image {
+    min-width: 300px;
+    min-height: 300px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url("../assets/images/savings.png");
+}
+
+section#options {
+    margin-top: 100px;
+}
+
+.options-container {
+    display: grid;
+    grid-gap: 15px;
+    margin-top: 25px;
+    grid-template-columns: repeat(auto-fit, minmax(175px, 1fr));
+
+    p {
+        color: #FFF;
+        font-size: 24px;
+        font-weight: 500;
+        padding: 20px 0px;
+        text-align: center;
+    }
+
+    ul {
+        list-style-position: inside;
+    }
+
+    li.done {
+        list-style-image: url(../assets/icons/done.png);
+    }
+
+    li.close {
+        list-style-image: url(../assets/icons/close.png);
+    }
+
+    ul > li {
+        color: #FFF;
+        font-size: 20px;
+        font-weight: 300;
+        padding: 20px 0px;
+        list-style-type: none;
+    }
+
+    .price-option {
+        font-size: 0px;
+
+        .price-header {
+            padding: 20px;
+            background-color: #382583;
+        }
+        .price-body {
+            padding: 20px;
+            background-color: rgba(56, 37, 131, 0.7);
+        }
+    }
+
+    .price-option.gold {
+        border: 2px solid #F8CF61;
+    }
+
+    .price-option.fluffy {
+        border: 2px solid #F36B7F;
+    }
+
+    .price-option:hover * {
+        background-color: #4C3B8F;
+    }
+}
