@@ -53,7 +53,6 @@ section {
 }
 
 .mobile-tab-bar {
-    display: none;
     bottom: 0;
     left: 50%;
     height: 72px;
@@ -208,11 +207,6 @@ section {
         background-color: inherit;
         border: 2px solid #F8CF61;
     }
-    /* #hero-btn-1:hover, #hero-btn-2:hover {
-        color: #000;
-        border: 2px solid #F36B7F;
-        background-color: #F36B7F;
-    } */
 }
 
 section#offer {
@@ -286,11 +280,11 @@ footer {
     }
 }
 
-/* @media screen and (min-width: 821px) {
+@media screen and (min-width: 821px) {
     .mobile-tab-bar {
         display: none;
     }
-} */
+}
 
 @media only screen and (max-width: 494px) {
     section {
