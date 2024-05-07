@@ -1,4 +1,5 @@
-import { Component, HostListener } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
+import { BaseComponent } from '../base/base.component';
 
 @Component({
   selector: 'app-nav-bar',
@@ -7,10 +8,14 @@ import { Component, HostListener } from '@angular/core';
   templateUrl: './nav-bar.component.html',
   styleUrl: './nav-bar.component.scss'
 })
-export class NavBarComponent {
+export class NavBarComponent extends BaseComponent implements OnInit {
 
   @HostListener('window:scroll', ['$event']) onScroll() {
     this.scrollFunction();
+  }
+
+  ngOnInit() {
+    this.sections = Array.from(document.querySelectorAll("section"));
   }
 
   scrollFunction() {
