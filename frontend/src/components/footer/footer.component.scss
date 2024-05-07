@@ -1,0 +1,24 @@
+footer {
+  background-color: #382583;
+  padding: 60px 100px 110px 100px;
+}
+
+@media only screen and (max-width: 494px) {
+  footer {
+      padding: 50px 20px 100px 20px;
+  }
+}
+
+.footer-name {
+  gap: 16px;
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  h1, p {
+      font-size: 20px;
+      font-weight: bold;
+  }
+  img {
+      width: 40px;
+  }
+}

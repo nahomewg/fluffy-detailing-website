@@ -1,0 +1,15 @@
+<!-- header component with tabs. -->
+<header>
+  <div class="header-name" (click)="toSection('home')">
+      <img src="./assets/icons/panda.png">
+      <h1>Fluffy's Auto Detailing</h1>
+  </div>
+  <div class="header-tabs">
+      <ul>
+          <li (click)="toSection('about')"><a>about</a></li>
+          <li (click)="toSection('pricing')"><a>pricing</a></li>
+          <li (click)="toSection('contact')"><a>contact</a></li>
+          <li (click)="toSection('gallery')"><a>gallery</a></li>
+      </ul>
+  </div>
+</header>
