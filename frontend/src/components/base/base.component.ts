@@ -10,7 +10,7 @@ import { Router } from '@angular/router';
 })
 export class BaseComponent {
 
-  constructor(private _router: Router) {}
+  constructor(public router: Router) {}
 
     private _currentPage: string;
 
@@ -52,7 +52,7 @@ export class BaseComponent {
       }
       else {
         console.log(sectionId + ' is not in the list ' + sectionIds);
-        this._router.navigate([sectionId, sectionId]);
+        this.router.navigate([sectionId], {queryParams: {section: sectionId}});
       }
     }
   // toSection(section: string, tabId = '', navPage = false) {
