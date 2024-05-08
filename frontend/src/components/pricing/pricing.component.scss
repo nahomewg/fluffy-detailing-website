@@ -18,55 +18,56 @@ section#options {
   grid-template-columns: repeat(auto-fit, minmax(175px, 1fr));
 
   p {
-      color: #FFF;
-      font-size: 24px;
-      font-weight: 500;
-      padding: 20px 0px;
-      text-align: center;
+    color: #FFF;
+    font-size: 24px;
+    font-weight: 500;
+    padding: 20px 0px;
+    text-align: center;
   }
 
   ul {
-      list-style-position: inside;
+    list-style-position: inside;
   }
 
   li.done {
-      list-style-image: url(../../assets/icons/done.png);
-  }
+    list-style-image: url(../../assets/icons/done.png);
+}
 
   li.close {
-      list-style-image: url(../../assets/icons/close.png);
+    opacity: 0.5;
+    list-style-image: url(../../assets/icons/close.png);
   }
 
   ul > li {
-      color: #FFF;
-      font-size: 20px;
-      font-weight: 300;
-      padding: 20px 0px;
-      list-style-type: none;
+    color: #FFF;
+    font-size: 20px;
+    font-weight: 300;
+    padding: 20px 0px;
+    list-style-type: none;
   }
 
   .price-option {
-      font-size: 0px;
+    font-size: 0px;
 
-      .price-header {
-          padding: 20px;
-          background-color: #382583;
-      }
-      .price-body {
-          padding: 20px;
-          background-color: rgba(56, 37, 131, 0.7);
-      }
+    .price-header {
+      padding: 20px;
+      background-color: #382583;
+    }
+    .price-body {
+      padding: 20px;
+      background-color: rgba(56, 37, 131, 0.7);
+    }
   }
 
   .price-option.gold {
-      border: 2px solid #F8CF61;
+    border: 2px solid #F8CF61;
   }
 
   .price-option.fluffy {
-      border: 2px solid #F36B7F;
+    border: 2px solid #F36B7F;
   }
 
   .price-option:hover * {
-      background-color: #4C3B8F;
+    background-color: #4C3B8F;
   }
 }
