@@ -49,10 +49,11 @@ export class BaseComponent {
       console.log(element, sectionIds)
       if (element && sectionIds.includes(element.id)) {
         element.scrollIntoView( { behavior: "smooth" } );
+        this.changeMobileTab(element.id);
       }
       else {
         console.log(sectionId + ' is not in the list ' + sectionIds);
-        this.router.navigate([sectionId], {queryParams: {section: sectionId}});
+        console.log(this.router.navigate([sectionId], {queryParams: {section: sectionId}}));
       }
     }
   // toSection(section: string, tabId = '', navPage = false) {
@@ -73,10 +74,10 @@ export class BaseComponent {
         tab.classList.remove("active");
         if (tab.id === tabId) {
             tab.classList.add("active");
-            if (navPage) {
-                window.location.href = "./" + (tabId === 'home' ? 'index' : tabId === 'contact' ? 'pricing' : tabId) + ".html"
-                + (tabId === 'contact' ? '?scrollSection=contact' : '');
-            }
+            // if (navPage) {
+            //     window.location.href = "./" + (tabId === 'home' ? 'index' : tabId === 'contact' ? 'pricing' : tabId) + ".html"
+            //     + (tabId === 'contact' ? '?scrollSection=contact' : '');
+            // }
         }
     });
   }
