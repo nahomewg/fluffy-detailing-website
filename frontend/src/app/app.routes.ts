@@ -7,10 +7,7 @@ export const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full'},
   { path: 'about', redirectTo: '/home' },
   { path: 'home', component: HomeComponent },
-  { path: 'pricing', component: PricingComponent, children: [
-    { path: 'contact', redirectTo: '/pricing/?section=contact'}
-  ]},
-  { path: 'gallery', component: GalleryComponent, children: [
-    { path: 'contact', redirectTo: '/gallery/?section=contact'}
-  ]}
+  { path: 'pricing', component: PricingComponent},
+  { path: 'contact', component: PricingComponent},
+  { path: 'gallery', component: GalleryComponent}
 ];
