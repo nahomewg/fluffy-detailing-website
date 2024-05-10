@@ -1,0 +1,106 @@
+
+<!-- header component with tabs. -->
+<app-header></app-header>
+
+<!-- main body of the landing page. -->
+<body>
+    <section id="pricing">
+        <div class="hero-container">
+            <div class="main-heading">
+                <h2>Pricing.</h2>
+                <p>Below are the different package options that we offer at Fluffy’s.</p>
+            </div>
+            <div class="savings-image"></div>
+        </div>
+        <div class="hero-buttons">
+            <button id="hero-btn-2" (click)="toSection('gallery')">Click to View Our Gallery</button>
+        </div>
+    </section>
+
+    <section id="options">
+        <div class="options-container">
+            <div class="price-option">
+                <div class="price-header">
+                    <p>Basic Package</p>
+                    <p>$40.00</p>
+                </div>
+                <div class="price-body">
+                    <ul>
+                        <li class="done">Exterior Wash.</li>
+                        <li class="close">Floor, Mats, Interior, & Windows.</li>
+                        <li class="close">Seats & Odor Removal.</li>
+                        <li class="close">Pet Hair Removal, Full Exterior, Tire Shine.</li>
+                    </ul>
+                    <div class="hero-buttons" style="justify-content: center;">
+                        <button id="hero-btn-1" style="min-width: auto;">Book Now</button>
+                    </div>
+                </div>
+            </div>
+            <div class="price-option">
+                <div class="price-header">
+                    <p>Extra Package</p>
+                    <p>$100.00</p>
+                </div>
+                <div class="price-body">
+                    <ul>
+                        <li class="done">Exterior Wash.</li>
+                        <li class="done">Floor, Mats, Interior, & Windows.</li>
+                        <li class="close">Seats & Odor Removal.</li>
+                        <li class="close">Pet Hair Removal, Full Exterior, Tire Shine.</li>
+                    </ul>
+                    <div class="hero-buttons" style="justify-content: center;">
+                        <button id="hero-btn-1" style="min-width: auto;">Book Now</button>
+                    </div>
+                </div>
+            </div>
+            <div class="price-option gold">
+                <div class="price-header">
+                    <p>Gold Package</p>
+                    <p>$150.00</p>
+                </div>
+                <div class="price-body">
+                    <ul>
+                        <li class="done">Exterior Wash.</li>
+                        <li class="done">Floor, Mats, Interior, & Windows.</li>
+                        <li class="done">Seats & Odor Removal.</li>
+                        <li class="close">Pet Hair Removal, Full Exterior, Tire Shine.</li>
+                    </ul>
+                    <div class="hero-buttons" style="justify-content: center;">
+                        <button id="hero-btn-1" style="min-width: auto;">Book Now</button>
+                    </div>
+                </div>
+            </div>
+            <div class="price-option fluffy">
+                <div class="price-header">
+                    <p>Fluffy's Package</p>
+                    <p>190.00</p>
+                </div>
+                <div class="price-body">
+                    <ul>
+                        <li class="done">Exterior Wash.</li>
+                        <li class="done">Floor, Mats, Interior, & Windows.</li>
+                        <li class="done">Seats & Odor Removal.</li>
+                        <li class="done">Pet Hair Removal, Full Exterior, Tire Shine.</li>
+                    </ul>
+                    <div class="hero-buttons" style="justify-content: center;">
+                        <button id="hero-btn-1" style="min-width: auto;">Book Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="services-container">
+            <h2>Contact Us.</h2>
+            <p>For any and all inquiries, questions, comments, and concerns, please feel free to contact us with one of the options below.
+            </p>
+            <div class="service-button">
+                <button>Email</button>
+            </div>
+        </div>
+    </section>
+    <app-nav-bar></app-nav-bar>
+</body>
+
+<app-footer></app-footer>
