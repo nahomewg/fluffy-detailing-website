@@ -17,8 +17,9 @@ export class GalleryComponent extends BaseComponent implements OnInit {
   slideIndex: number = 1;
 
   ngOnInit() {
-    this.currentPage = "gallery";
     this.showSlides(this.slideIndex);
+    this.navTab = Array.from(document.querySelectorAll("nav .icons div"));
+    this.changeMobileTab('gallery');
   }
 
   plusSlides(n: number) {

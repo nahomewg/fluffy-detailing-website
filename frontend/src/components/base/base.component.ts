@@ -49,12 +49,11 @@ export class BaseComponent {
       console.log(element, sectionIds)
       if (element && sectionIds.includes(element.id)) {
         element.scrollIntoView( { behavior: "smooth" } );
-        // this.changeMobileTab(element.id);
+        this.changeMobileTab(element.id);
       }
       else {
-        const contactScroll = sectionId == 'contact' ? 'contact' : '';
         console.log(sectionId + ' is not in the list ' + sectionIds);
-        this.router.navigate([sectionId], { fragment: contactScroll });
+        this.router.navigate([sectionId]);
       }
     }
   // toSection(section: string, tabId = '', navPage = false) {
@@ -71,6 +70,7 @@ export class BaseComponent {
   // }
 
   changeMobileTab(tabId: string, navPage: boolean = false) {
+    console.log(this._navTab, this.navTab)
     this.navTab.forEach((tab) => {
         tab.classList.remove("active");
         if (tab.id === tabId) {

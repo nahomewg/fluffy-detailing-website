@@ -15,7 +15,8 @@ export class HomeComponent extends BaseComponent implements OnInit {
 
 
   ngOnInit() {
-    this.currentPage = 'home';
     this.sections = Array.from(document.querySelectorAll("section"));
+    this.navTab = Array.from(document.querySelectorAll("nav .icons div"));
+    this.changeMobileTab('home');
   }
 }

@@ -11,7 +11,6 @@ import { BaseComponent } from '../base/base.component';
 export class HeaderComponent extends BaseComponent implements OnInit {
 
   ngOnInit() {
-    this.currentPage = 'Header';
     this.sections = Array.from(document.querySelectorAll("section"));
     this.navTab = Array.from(document.querySelectorAll("nav .icons div"));
   }
