@@ -10,10 +10,9 @@ import { CommonModule } from '@angular/common';
     RouterOutlet,
     CommonModule
   ],
-  templateUrl: 'app.component.html'
-  // template: `
-  // <router-outlet></router-outlet>
-  // `
+  template: `
+  <router-outlet></router-outlet>
+  `
 })
 export class AppComponent implements OnInit {
   title = 'fluffyDetailing';
