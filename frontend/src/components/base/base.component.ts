@@ -1,12 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, Directive } from '@angular/core';
 import { Router } from '@angular/router';
 
-@Component({
+@Directive({
   selector: 'app-base',
-  standalone: true,
-  imports: [],
-  templateUrl: './base.component.html',
-  styleUrl: './base.component.scss'
+  standalone: true
 })
 export class BaseComponent {
 
@@ -54,28 +51,12 @@ export class BaseComponent {
         this.router.navigate([sectionId]);
       }
     }
-  // toSection(section: string, tabId = '', navPage = false) {
-  //   const element = document.getElementById(section);
-  //   element?.scrollIntoView( { behavior: "smooth" } );
 
-  //   if (window.screen.width <= 820 || tabId != '') {
-  //       this.changeMobileTab(tabId);
-  //   }
-
-  //   if (tabId === '') {
-  //       this.changeMobileTab(this.currentPage);
-  //   }
-  // }
-
-  changeMobileTab(tabId: string, navPage: boolean = false) {
+  changeMobileTab(tabId: string) {
     this.navTab.forEach((tab) => {
         tab.classList.remove("active");
         if (tab.id === tabId) {
             tab.classList.add("active");
-            // if (navPage) {
-            //     window.location.href = "./" + (tabId === 'home' ? 'index' : tabId === 'contact' ? 'pricing' : tabId) + ".html"
-            //     + (tabId === 'contact' ? '?scrollSection=contact' : '');
-            // }
         }
     });
   }
