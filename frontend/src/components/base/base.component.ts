@@ -46,13 +46,11 @@ export class BaseComponent {
     toSection(sectionId: string) {
       const sectionIds = this._sections.map(element => element.id);
       const element = document.getElementById(sectionId);
-      console.log(element, sectionIds)
       if (element && sectionIds.includes(element.id)) {
         element.scrollIntoView( { behavior: "smooth" } );
-        this.changeMobileTab(element.id);
+        this.changeMobileTab(element.id == 'about' ? 'home' : element.id);
       }
       else {
-        console.log(sectionId + ' is not in the list ' + sectionIds);
         this.router.navigate([sectionId]);
       }
     }
@@ -70,7 +68,6 @@ export class BaseComponent {
   // }
 
   changeMobileTab(tabId: string, navPage: boolean = false) {
-    console.log(this._navTab, this.navTab)
     this.navTab.forEach((tab) => {
         tab.classList.remove("active");
         if (tab.id === tabId) {
