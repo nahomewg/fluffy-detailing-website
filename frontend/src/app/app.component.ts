@@ -1,16 +1,29 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { ApiService } from '../services/api.service';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-root',
   standalone: true,
   imports: [
-    RouterOutlet
+    RouterOutlet,
+    CommonModule
   ],
-  template: `
-  <router-outlet></router-outlet>
-  `
+  templateUrl: 'app.component.html'
+  // template: `
+  // <router-outlet></router-outlet>
+  // `
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = 'fluffyDetailing';
+  message: any;
+
+  constructor(private apiService: ApiService) { };
+
+  ngOnInit() {
+      this.apiService.getMessage().subscribe(data => {
+        this.message = data;
+      })
+  }
 }
