@@ -1,6 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { ApiService } from '../services/api.service';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -14,15 +13,6 @@ import { CommonModule } from '@angular/common';
   <router-outlet></router-outlet>
   `
 })
-export class AppComponent implements OnInit {
+export class AppComponent {
   title = 'fluffyDetailing';
-  message: any;
-
-  constructor(private apiService: ApiService) { };
-
-  ngOnInit() {
-      this.apiService.getMessage().subscribe(data => {
-        this.message = data;
-      })
-  }
 }
