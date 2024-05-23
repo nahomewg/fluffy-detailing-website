@@ -1,4 +1,61 @@
+body {
+  min-height: 500px;
+  background: white !important;
+  padding: 25px;
+}
+
 h1, h2, h3, h4, p, a {
   color: #000;
   margin: 0;
+}
+
+
+.header-container {
+  display: flex;
+  padding: 20px 25px;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 2px solid #9747FF;
+
+  p {
+    font-weight: 500;
+  }
+
+  button {
+    height: 24px;
+    width: 24px;
+    border: none;
+    cursor: pointer;
+    background: none;
+
+    img {
+      height: inherit;
+    }
+  }
+}
+
+.service-list {
+  margin-left: 25px;
+}
+
+.form-container {
+  margin-top: 50px;
+
+  .form-row {
+    gap: 25px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+
+  .form-row > div {
+    display: flex;
+    flex-direction: column;
+
+    mat-label {
+      font-size: 20px;
+      font-weight: 300;
+      margin-bottom: 10px;
+    }
+  }
+
 }

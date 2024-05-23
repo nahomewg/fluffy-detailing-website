@@ -1,7 +1,81 @@
-<h1 mat-dialog-title>Welcome user</h1>
+<!-- <h1 mat-dialog-title>Welcome user</h1>
 <div mat-dialog-content>
   <p>{{ data.package }}</p>
 </div>
 <div mat-dialog-actions>
   <button mat-button (click)="onClose()">No Thanks</button>
-</div>
+</div> -->
+
+<header>
+  <div class="header-container">
+    <p>Appointment Request</p>
+    <button (click)="onClose()">
+      <img src="../../assets/icons/close-no-outline.png">
+    </button>
+  </div>
+</header>
+
+<body>
+  <div>
+    <p class="font-500">{{ data.package | titlecase }} Package:</p>
+    <br>
+    <p>Thank you for choosing Fluffy`s Auto Detailing. You have selected the {{ data.package | titlecase }} Package. Please review and confirm the details  below and proceed to booking an appointment.
+      <br><br>
+      Your service includes:</p>
+    <ul class="service-list">
+      <li *ngFor="let service of serviceList" class="font-500">{{service}}</li>
+    </ul>
+    <p>Please fill out the form below, enter your contact information as well as the date and time you would like to schedule an appointment.
+        We will confirm your appointment with an email or, inform you that the date and time you selected is unavailable.
+        If that time is unavailable, we will suggest to you another date and/or time.
+    </p>
+  </div>
+
+  <div class="form-container">
+    <div class="form-row">
+      <div>
+        <mat-label>First Name</mat-label>
+        <mat-form-field appearance="outline">
+          <input matInput type="text">
+        </mat-form-field>
+      </div>
+      <div>
+        <mat-label>Last Name</mat-label>
+        <mat-form-field appearance="outline">
+          <input matInput type="text">
+        </mat-form-field>
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div>
+        <mat-label>Phone Number</mat-label>
+        <mat-form-field appearance="outline">
+          <input matInput type="tel">
+        </mat-form-field>
+      </div>
+      <div>
+        <mat-label>Selected Package</mat-label>
+        <mat-form-field appearance="outline">
+          <input matInput type="text">
+        </mat-form-field>
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div>
+        <mat-label>Appointment Date</mat-label>
+        <mat-form-field appearance="outline">
+          <input matInput type="date">
+        </mat-form-field>
+      </div>
+      <div>
+        <mat-label>Appointment Time</mat-label>
+        <mat-form-field appearance="outline">
+          <input matInput type="time">
+        </mat-form-field>
+      </div>
+    </div>
+
+  </div>
+</body>

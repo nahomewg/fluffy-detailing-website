@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { MatDialog } from '@angular/material/dialog';
+import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
 import { FooterComponent } from '../footer/footer.component';
 import { HeaderComponent } from '../header/header.component';
 import { NavBarComponent } from '../nav-bar/nav-bar.component';
@@ -25,8 +25,10 @@ export class PricingComponent extends BaseComponent implements OnInit {
   }
 
   openBooking(bookingType: string) {
-    let dialogRef = this.dialog.open(BookingComponent, {
+    let config: MatDialogConfig = {
+      panelClass: "dialog-responsive",
       data: { package: bookingType }
-    });
+    }
+    let dialogRef = this.dialog.open(BookingComponent, config);
   }
 }
