@@ -44,6 +44,7 @@ h1, h2, h3, h4, p, a {
   .form-row {
     gap: 25px;
     display: grid;
+    padding: 10px 0px;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   }
 
@@ -57,5 +58,4 @@ h1, h2, h3, h4, p, a {
       margin-bottom: 10px;
     }
   }
-
 }
