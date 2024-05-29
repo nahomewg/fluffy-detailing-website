@@ -2,22 +2,13 @@ import { CommonModule, formatDate } from '@angular/common';
 import { Component, Inject, OnInit } from '@angular/core';
 import { FormsModule, FormGroup, FormControl, ReactiveFormsModule, Validators, FormBuilder } from '@angular/forms';
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
-import { MatFormField, MatFormFieldModule } from '@angular/material/form-field';
-import { MatInputModule } from '@angular/material/input';
-import { MatDatepickerModule } from '@angular/material/datepicker';
-import { DateAdapter, MatNativeDateModule } from '@angular/material/core';
 
 @Component({
   selector: 'app-booking',
   standalone: true,
-  imports: [MatFormField,
-            FormsModule,
+  imports: [FormsModule,
             CommonModule,
-            MatFormFieldModule,
-            MatInputModule,
-            ReactiveFormsModule,
-            MatDatepickerModule,
-            MatNativeDateModule],
+            ReactiveFormsModule],
   templateUrl: './booking.component.html',
   styleUrl: './booking.component.scss'
 })
@@ -25,8 +16,7 @@ export class BookingComponent implements OnInit {
   constructor(
     @Inject(MAT_DIALOG_DATA) public data: any,
     public dialogRef: MatDialogRef<BookingComponent>,
-    private fb: FormBuilder,
-    private dateAdapter: DateAdapter<any>
+    private fb: FormBuilder
   ) { }
 
   form: FormGroup;
@@ -45,8 +35,6 @@ export class BookingComponent implements OnInit {
     this.data.package === 'extra' ? this.serviceList.push('Floors, Mats, Interior, & Windows') :
     this.data.package === 'gold' ? this.serviceList.push('Floors, Mats, Interior, & Windows', 'Seats & Odor Removal') :
     this.data.package === 'fluffy`s' ? this.serviceList.push('Floors, Mats, Interior, & Windows', 'Seats & Odor Removal', 'Pet Hair Removal, Full Exterior, Tire Shine') : '';
-
-    this.dateAdapter.setLocale('en-CA');
 
     this.form = this.fb.group({
       firstName: new FormControl('', Validators.required),
@@ -87,7 +75,7 @@ export class BookingComponent implements OnInit {
   }
 
   onSubmit() {
-
+    console.log(this.form);
   }
 
   onClose() {

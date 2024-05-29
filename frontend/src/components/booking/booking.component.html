@@ -1,6 +1,6 @@
 <header>
   <div class="header-container">
-    <p>Appointment Request</p>
+    <h4>Appointment Request</h4>
     <button (click)="onClose()">
       <img src="../../assets/icons/close-no-outline.png">
     </button>
@@ -9,7 +9,7 @@
 
 <body>
   <div>
-    <p class="font-500">{{ data.package | titlecase }} Package:</p>
+    <h4>{{ data.package | titlecase }} Package:</h4>
     <br>
     <p>Thank you for choosing Fluffy`s Auto Detailing. You have selected the {{ data.package | titlecase }} Package. Please review and confirm the details  below and proceed to booking an appointment.
       <br><br>
@@ -26,63 +26,52 @@
   <div class="form-container">
     <form [formGroup]="form" (ngSubmit)="onSubmit()">
       <div class="form-row">
-        <div>
-          <mat-label>First Name</mat-label>
-          <mat-form-field appearance="outline" style="margin-bottom: -1.25em;">
-            <input matInput formControlName="firstName" type="text">
-          </mat-form-field>
-          <mat-error *ngIf="firstName?.invalid && (firstName?.touched || firstName?.dirty)">
+        <div class="form-input">
+          <label>First Name</label>
+          <input matInput formControlName="firstName" type="text">
+          <p *ngIf="firstName?.invalid && (firstName?.touched || firstName?.dirty)">
             This field is required.
-          </mat-error>
+          </p>
         </div>
-        <div>
-          <mat-label>Last Name</mat-label>
-          <mat-form-field appearance="outline" style="margin-bottom: -1.25em;">
-            <input matInput formControlName="lastName" type="text">
-          </mat-form-field>
-          <mat-error *ngIf="lastName?.invalid && (lastName?.touched || lastName?.dirty)">
+        <div class="form-input">
+          <label>Last Name</label>
+          <input matInput formControlName="lastName" type="text">
+          <p *ngIf="lastName?.invalid && (lastName?.touched || lastName?.dirty)">
             This field is required.
-          </mat-error>
+          </p>
         </div>
       </div>
 
       <div class="form-row">
-        <div>
-          <mat-label>Phone Number</mat-label>
-          <mat-form-field appearance="outline" style="margin-bottom: -1.25em;">
-            <input matInput formControlName="phoneNumber" type="tel">
-          </mat-form-field>
-          <mat-error *ngIf="phoneNumber?.invalid && (phoneNumber?.touched || phoneNumber?.dirty)">
+        <div class="form-input">
+          <label>Phone Number</label>
+          <input matInput formControlName="phoneNumber" type="tel">
+          <p *ngIf="phoneNumber?.invalid && (phoneNumber?.touched || phoneNumber?.dirty)">
             You must enter a valid 10 digit phone number.
-          </mat-error>
+          </p>
         </div>
-        <div>
-          <mat-label>Email</mat-label>
-          <mat-form-field appearance="outline" style="margin-bottom: -1.25em;">
-            <input matInput formControlName="email" type="text">
-          </mat-form-field>
-          <mat-error *ngIf="email?.invalid && (email?.touched || email?.dirty)">
+        <div class="form-input">
+          <label>Email</label>
+          <input matInput formControlName="email" type="text">
+          <p *ngIf="email?.invalid && (email?.touched || email?.dirty)">
             You must enter a valid email address.
-          </mat-error>
+          </p>
         </div>
       </div>
 
       <div class="form-row">
-        <div>
-          <mat-label>Appointment Date</mat-label>
-          <mat-form-field appearance="outline">
-            <input matInput [matDatepicker]="datePicker" formControlName="appointmentDate" type="date">
-            <mat-datepicker-toggle matIconSuffix [for]="datePicker"></mat-datepicker-toggle>
-            <mat-datepicker #datePicker></mat-datepicker>
+        <div class="form-input">
+          <label>Appointment Date</label>
+          <input formControlName="appointmentDate" type="date">
+        </div>
+        <div class="form-input">
+          <label>Appointment Time</label>
+          <input formControlName="appointmentTime" type="time">
+        </div>
+      </div>
 
-          </mat-form-field>
-        </div>
-        <div>
-          <mat-label>Appointment Time</mat-label>
-          <mat-form-field appearance="outline">
-            <input matInput formControlName="appointmentTime" type="time">
-          </mat-form-field>
-        </div>
+      <div class="hero-buttons flex-center">
+        <button id="hero-btn-1">Submit</button>
       </div>
     </form>
   </div>

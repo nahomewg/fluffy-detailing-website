@@ -16,9 +16,15 @@ h1, h2, h3, h4, p, a {
   margin: 0;
 }
 
-li, p, a {
+li, p, a, label, input {
   font-size: 20px;
   font-weight: 300;
+  font-family: 'Roboto';
+}
+
+h4 {
+  font-size: 20px;
+  font-weight: 500;
 }
 
 ul {

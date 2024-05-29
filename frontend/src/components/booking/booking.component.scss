@@ -58,4 +58,26 @@ h1, h2, h3, h4, p, a {
       margin-bottom: 10px;
     }
   }
+
+  .form-input {
+
+    label {
+      padding-bottom: 10px;
+    }
+
+    input {
+      padding: 10px;
+      min-height: 30px;
+      border-radius: 15px;
+      border: 1px solid black;
+    }
+
+    p {
+      color: red;
+      font-size: 16px;
+      font-weight: 400;
+      padding-top: 10px;
+    }
+
+  }
 }
