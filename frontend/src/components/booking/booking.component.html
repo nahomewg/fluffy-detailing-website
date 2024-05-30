@@ -28,14 +28,14 @@
       <div class="form-row">
         <div class="form-input">
           <label>First Name</label>
-          <input matInput formControlName="firstName" type="text">
+          <input formControlName="firstName" type="text">
           <p *ngIf="firstName?.invalid && (firstName?.touched || firstName?.dirty)">
             This field is required.
           </p>
         </div>
         <div class="form-input">
           <label>Last Name</label>
-          <input matInput formControlName="lastName" type="text">
+          <input formControlName="lastName" type="text">
           <p *ngIf="lastName?.invalid && (lastName?.touched || lastName?.dirty)">
             This field is required.
           </p>
@@ -45,14 +45,14 @@
       <div class="form-row">
         <div class="form-input">
           <label>Phone Number</label>
-          <input matInput formControlName="phoneNumber" type="tel">
+          <input formControlName="phoneNumber" type="tel">
           <p *ngIf="phoneNumber?.invalid && (phoneNumber?.touched || phoneNumber?.dirty)">
             You must enter a valid 10 digit phone number.
           </p>
         </div>
         <div class="form-input">
           <label>Email</label>
-          <input matInput formControlName="email" type="text">
+          <input formControlName="email" type="text">
           <p *ngIf="email?.invalid && (email?.touched || email?.dirty)">
             You must enter a valid email address.
           </p>
@@ -63,14 +63,20 @@
         <div class="form-input">
           <label>Appointment Date</label>
           <input formControlName="appointmentDate" type="date">
+          <p *ngIf="appointmentDate?.invalid && (appointmentDate?.touched || appointmentDate?.dirty)">
+            You must enter a valid date.
+          </p>
         </div>
         <div class="form-input">
           <label>Appointment Time</label>
           <input formControlName="appointmentTime" type="time">
+          <p *ngIf="appointmentTime?.invalid && (appointmentTime?.touched || appointmentTime?.dirty)">
+            You must enter a valid time.
+          </p>
         </div>
       </div>
 
-      <div class="hero-buttons flex-center">
+      <div class="hero-buttons" style="justify-content: center;">
         <button id="hero-btn-1">Submit</button>
       </div>
     </form>
