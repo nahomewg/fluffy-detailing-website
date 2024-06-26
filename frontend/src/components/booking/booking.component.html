@@ -1,0 +1,84 @@
+<header>
+  <div class="header-container">
+    <h4>Appointment Request</h4>
+    <button (click)="onClose()">
+      <img src="../../assets/icons/close-no-outline.png">
+    </button>
+  </div>
+</header>
+
+<body>
+  <div>
+    <h4>{{ data.package | titlecase }} Package:</h4>
+    <br>
+    <p>Thank you for choosing Fluffy`s Auto Detailing. You have selected the {{ data.package | titlecase }} Package. Please review and confirm the details  below and proceed to booking an appointment.
+      <br><br>
+      Your service includes:</p>
+    <ul class="service-list">
+      <li *ngFor="let service of serviceList" class="font-500">{{service}}</li>
+    </ul>
+    <p>Please fill out the form below, enter your contact information as well as the date and time you would like to schedule an appointment.
+        We will confirm your appointment with an email or, inform you that the date and time you selected is unavailable.
+        If that time is unavailable, we will suggest to you another date and/or time.
+    </p>
+  </div>
+
+  <div class="form-container">
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+      <div class="form-row">
+        <div class="form-input">
+          <label>First Name</label>
+          <input formControlName="firstName" type="text">
+          <p *ngIf="firstName?.invalid && (firstName?.touched || firstName?.dirty)">
+            This field is required.
+          </p>
+        </div>
+        <div class="form-input">
+          <label>Last Name</label>
+          <input formControlName="lastName" type="text">
+          <p *ngIf="lastName?.invalid && (lastName?.touched || lastName?.dirty)">
+            This field is required.
+          </p>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-input">
+          <label>Phone Number</label>
+          <input formControlName="phoneNumber" type="tel">
+          <p *ngIf="phoneNumber?.invalid && (phoneNumber?.touched || phoneNumber?.dirty)">
+            You must enter a valid 10 digit phone number.
+          </p>
+        </div>
+        <div class="form-input">
+          <label>Email</label>
+          <input formControlName="email" type="text">
+          <p *ngIf="email?.invalid && (email?.touched || email?.dirty)">
+            You must enter a valid email address.
+          </p>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-input">
+          <label>Appointment Date</label>
+          <input formControlName="appointmentDate" type="date">
+          <p *ngIf="appointmentDate?.invalid && (appointmentDate?.touched || appointmentDate?.dirty)">
+            You must enter a valid date.
+          </p>
+        </div>
+        <div class="form-input">
+          <label>Appointment Time</label>
+          <input formControlName="appointmentTime" type="time">
+          <p *ngIf="appointmentTime?.invalid && (appointmentTime?.touched || appointmentTime?.dirty)">
+            You must enter a valid time.
+          </p>
+        </div>
+      </div>
+
+      <div class="hero-buttons" style="justify-content: center;">
+        <button id="hero-btn-1">Submit</button>
+      </div>
+    </form>
+  </div>
+</body>
