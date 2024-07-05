@@ -12,7 +12,7 @@ export class ApiService {
   // }
 
   requestAppointment(appointment: any) {
-    return this.http.post('http://localhost:3000/api/appointmentRequest/', appointment);
+    return this.http.post('https://fluffy-backend.netlify.app/api/appointmentrequest', appointment);
   }
 
 }
