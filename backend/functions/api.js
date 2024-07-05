@@ -6,16 +6,6 @@ const router = express.Router();
 const cors = require("cors");
 const nodemailer = require("nodemailer");
 
-// const transporter = nodemailer.createTransport({
-//     port: 465,
-//     host: "smtp.gmail.com",
-//     auth: {
-//         user: "nahome@woldecode.ca",
-//         pass: "Senzero1999"
-//     },
-//     secure: true
-// });
-
 const transporter = nodemailer.createTransport({
     host: 'smtp.ethereal.email',
     port: 587,
